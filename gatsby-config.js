@@ -190,6 +190,9 @@ module.exports = {
       }
     },
     'gatsby-plugin-flow',
-    'gatsby-plugin-optimize-svgs',
+    // draw.io technically doesn't support svgs with latex...
+    // so the svgs it produces aren't super stable - svgo messes them up
+    // Disabling this until I figure out a better tool for creating svgs
+    // 'gatsby-plugin-optimize-svgs',
   ]
 };
