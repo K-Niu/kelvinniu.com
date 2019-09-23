@@ -7,6 +7,8 @@ import Page from '../components/Page';
 import { useSiteMetadata } from '../hooks';
 import type { MarkdownRemark } from '../types';
 
+import "katex/dist/katex.min.css";
+
 type Props = {
   data: {
     markdownRemark: MarkdownRemark

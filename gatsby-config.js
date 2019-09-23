@@ -32,13 +32,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'css',
-        path: `${__dirname}/static/css`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'assets',
         path: `${__dirname}/static`
       }
@@ -103,12 +96,6 @@ module.exports = {
         plugins: [
           'gatsby-remark-relative-images',
           {
-            resolve: 'gatsby-remark-katex',
-            options: {
-              strict: 'ignore'
-            }
-          },
-          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 960,
@@ -122,6 +109,7 @@ module.exports = {
           },
           'gatsby-remark-autolink-headers',
           'gatsby-remark-prismjs',
+          'gatsby-remark-katex',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-external-links'
