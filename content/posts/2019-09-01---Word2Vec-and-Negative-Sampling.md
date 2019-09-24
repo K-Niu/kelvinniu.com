@@ -97,7 +97,7 @@ where $e_i$ is the input word's input embedding and $e_o$ is the output/random w
 The word2vec paper found that empirically, drawing negative samples from the unigram distribution raised to the $\frac{3}{4}$ power $U(w)^{\frac{3}{4}}/Z$ outperformed the unigram distribution $U(w)$. Intuitively, this flattens the $U(w)$ so that more frequent words are slightly underweighted compared to before and less frequent words are slightly overweighted compared to before.
 
 ## Subsampling
-Subsampling of frequent words speeds up training and improves the vector representations of less frequent words. This is because we observe common words such as "the" so many times that we learn their embeddings very well and further training examples don't change their embeddings significantly. So it would be a better use of training time to prioritize the training examples of the less frequent words, so that we can learn good embeddings for them as well. The subsampling method used in the word2vec paper discards a training pair with target word $w_i$ (is this correct?) probability
+Subsampling of frequent words speeds up training and improves the vector representations of less frequent words. This is because we observe common words such as "the" so many times that we learn their embeddings very well and further training examples don't change their embeddings significantly. So it would be a better use of training time to prioritize the training examples of the less frequent words, so that we can learn good embeddings for them as well. The subsampling method used in the word2vec paper discards a word (removes it as a target word and as part of any other target word's training context) $w_i$ from the text with probability
 
 $$
 P(w_{i})=1-\sqrt{\frac{t}{f(w_{i})}}
