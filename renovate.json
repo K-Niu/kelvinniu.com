@@ -1,5 +1,19 @@
 {
   "extends": [
     "config:base"
-  ]
+  ],
+  "packageRules": [
+  {
+    "packagePatterns": ["^eslint"],
+    "groupName": "eslint"
+  },
+  {
+    "packagePatterns": ["gatsby"],
+    "groupName": "gatsby"
+  },
+  {
+    "packageNames": ["react", "react-dom"],
+    "groupName": "react"
+  }
+]
 }
