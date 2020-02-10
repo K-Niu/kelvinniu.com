@@ -113,7 +113,7 @@ Also, just to emphasize how important a stable cross validation setup was for th
 Many people had huge falls due to overfitting to the public leaderboard. But others had huge rises due to a stable cross validation setup.
 
 ## Code
-A cleaned up version of the code I used is available [here](https://github.com/K-Niu/kaggle/dsb_bowl_2019). The gradient boosting (LightGBM) code is pretty generic, but the RNN code is a good starter of how to implement a RNN in Keras/Tensorflow using `tf.feature_column` and `tf.keras.experimental.SequenceFeatures` (the documentation was sparse and it took me a while to get it working!).
+A cleaned up version of the code I used is available [here](https://github.com/K-Niu/kaggle/tree/master/dsb_2019). The gradient boosting (LightGBM) code is pretty generic, but the RNN code is a good starter of how to implement a RNN in Keras/Tensorflow using `tf.feature_column` and `tf.keras.experimental.SequenceFeatures` (the documentation was sparse and it took me a while to get it working!).
 
 
 ## Final Ranking
